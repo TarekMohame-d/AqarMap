@@ -10,8 +10,7 @@ public class Owner extends ApartmentInfo {
         int apartmentNum = 0; // Number of owner apartments.
         while (true) {
             for (int i = 0; i < 5; i++) {
-                if (owner.apartmentInfo[i] == null) {
-                    owner.apartmentInfo[i] = new ApartmentInfo();
+                if (owner.apartmentInfo[i].apartmentId == null) {
                     apartmentNum = i;
                     break;
                 }
@@ -141,5 +140,44 @@ public class Owner extends ApartmentInfo {
                 break;
             }
         }
+    }
+
+    void displayApartment(Owner owner, int apartmentNumber) {
+        System.out.println("Owner info ------->>\n");
+        System.out.print("Apartment owner name : ");
+        System.out.println(owner.name+"\n");
+        System.out.print("Apartment owner phone : ");
+        System.out.println(owner.phone);
+        System.out.print("\n-------------------------------------------------------------------------\n");
+        System.out.print("-------------------------------------------------------------------------\n\n");
+        System.out.println("Apartment info ------->>\n");
+        System.out.print("Apartment id : ");
+        System.out.println(owner.apartmentInfo[apartmentNumber].apartmentId);
+        System.out.print("\n-------------------------------------------------------------------------\n");
+        System.out.print("-------------------------------------------------------------------------\n\n");
+        System.out.print("Apartment location --->>\n\n");
+        System.out.print("Apartment city : ");
+        System.out.println(owner.apartmentInfo[apartmentNumber].apartmentCity);
+        System.out.print("Apartment Street : ");
+        System.out.println(owner.apartmentInfo[apartmentNumber].apartmentStreet);
+        System.out.print("\n-------------------------------------------------------------------------\n");
+        System.out.print("-------------------------------------------------------------------------\n\n");
+        System.out.print("Apartment Price : ");
+        System.out.println(owner.apartmentInfo[apartmentNumber].price);
+        System.out.print("\n-------------------------------------------------------------------------\n");
+        System.out.print("-------------------------------------------------------------------------\n\n");
+        System.out.print("Apartment view : ");
+        System.out.println(owner.apartmentInfo[apartmentNumber].view);
+        System.out.print("\n-------------------------------------------------------------------------\n");
+        System.out.print("-------------------------------------------------------------------------\n\n");
+        System.out.print("Apartment payment method : ");
+        System.out.println(owner.apartmentInfo[apartmentNumber].paymentMethod);
+        if (owner.apartmentInfo[apartmentNumber].paymentMethod.equals("Installments")) {
+            System.out.print("DownPayment : ");
+            System.out.println(owner.apartmentInfo[apartmentNumber].downPayment);
+            System.out.print("Installments years : ");
+            System.out.println(owner.apartmentInfo[apartmentNumber].installmentsYears);
+        }
+
     }
 }

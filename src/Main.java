@@ -1,9 +1,15 @@
 public class Main {
     public static void main(String[] args) {
         Menu menu = new Menu();
+        Client client = new Client();
         Owner owner[] = new Owner[5];
         for (int i = 0; i < 5; i++) {
             owner[i] = new Owner();
+        }
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                owner[i].apartmentInfo[j] = new ApartmentInfo();
+            }
         }
         int userInControl;
         while (true) {
@@ -36,8 +42,12 @@ public class Main {
                         }
                     }
                 } else if (choice.equals("2")) {
-                    System.out.println("Client menu here...");
-                    break;
+                    choice = menu.clientMenu();
+                    switch (choice) {
+                        case "1":
+                            client.searchByLocation(owner);
+                            break;
+                    }
                 }
             }
         }
