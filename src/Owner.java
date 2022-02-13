@@ -2,9 +2,7 @@ public class Owner extends ApartmentInfo {
     String name;
     String password;
     String phone;
-    // static int counter = 0;
     String ownerId;
-    static int ownerCounter = 0;
     ApartmentInfo apartmentInfo[] = new ApartmentInfo[5];
 
     public void apartmentData(Owner owner) {

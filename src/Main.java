@@ -16,12 +16,12 @@ public class Main {
                         menu.SignUp(owner);
                         System.out.println("\t\t\t *****  Login  ***** \t\t\t\n");
                         userInControl = menu.Login(owner);
-                        if (menu.out == true) {
+                        if (menu.out == true) { // User doesn't want to login
                             continue;
                         }
                     } else {
                         userInControl = menu.Login(owner);
-                        if (menu.out == true) {
+                        if (menu.out == true) { // User doesn't want to login
                             continue;
                         }
                     }

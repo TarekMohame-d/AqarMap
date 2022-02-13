@@ -65,8 +65,10 @@ public class Menu {
     void SignUp(Owner owner[]) {
         int ownerNumber = -1;
         for (int i = 0; i < 5; i++) {
-            if (owner[i].ownerId == null)
+            if (owner[i].ownerId == null) {
                 ownerNumber = i;
+                break;
+            }
         }
         System.out.print("Enter your name : ");
         owner[ownerNumber].name = input.nextLine();
@@ -81,7 +83,6 @@ public class Menu {
         owner[ownerNumber].ownerId = input.nextLine();
         System.out.println("\nWait signup in progress...");
         System.out.println("Signup successful\n\n");
-        owner[ownerNumber].ownerCounter++;
     }
 
     int Login(Owner owner[]) {
@@ -105,7 +106,7 @@ public class Menu {
                     break;
                 }
             }
-            if (flag != false) {
+            if (flag == true) {
                 System.out.println("\nIncorrect username or password\n");
             }
             while (flag) {
@@ -127,6 +128,6 @@ public class Menu {
             }
         }
         flag = true;
-        return owner[userInControl].ownerCounter;
+        return userInControl;
     }
 }
