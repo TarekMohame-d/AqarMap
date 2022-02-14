@@ -11,7 +11,7 @@ public class Main {
                 owner[i].apartmentInfo[j] = new ApartmentInfo();
             }
         }
-        int userInControl;
+        int userInControl; // To catch owner number in the array of owners that log in
         while (true) {
             while (true) {
                 System.out.println("\n\n\n\t\t\t\t\t******** Welcome to 'AqarMap' system ********\t\t\t\n\n\n\n");
@@ -21,28 +21,28 @@ public class Main {
                     if (choice.equals("1")) {
                         menu.SignUp(owner);
                         System.out.println("\t\t\t *****  Login  ***** \t\t\t\n");
-                        userInControl = menu.Login(owner);
-                        if (menu.out == true) { // User doesn't want to login
+                        userInControl = menu.Login(owner); // Catch which owner log in
+                        if (menu.out == true) { // If the user doesn't want to login it go back to first menu
                             continue;
                         }
                     } else {
                         userInControl = menu.Login(owner);
-                        if (menu.out == true) { // User doesn't want to login
+                        if (menu.out == true) {
                             continue;
                         }
                     }
                     choice = menu.secondOwnerMenu(); // Advertise for an apartment or edit an advertisement.
                     while (true) {
                         if (choice.equals("1")) {
-                            owner[userInControl].apartmentData(owner[userInControl]);
+                            owner[userInControl].apartmentData(owner[userInControl]); // Advertise for an apartment
                             break;
                         } else if (choice.equals("2")) {
-                            owner[userInControl].editApartmentInfo(owner[userInControl]);
+                            owner[userInControl].editApartmentInfo(owner[userInControl]); // Edit an advertisement
                             break;
                         }
                     }
                 } else if (choice.equals("2")) {
-                    choice = menu.clientMenu();
+                    choice = menu.clientMenu(); // Choose from 4 available search methods
                     switch (choice) {
                         case "1":
                             client.searchByLocation(owner);

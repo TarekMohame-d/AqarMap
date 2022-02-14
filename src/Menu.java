@@ -88,7 +88,7 @@ public class Menu {
     int Login(Owner owner[]) {
         String tempUserName;
         String tempPassword;
-        int userInControl = -1;
+        int userInControl = -1; // To know which owner are currently logged in
         String ans = "";
         boolean flag = true;
         while (flag) {
