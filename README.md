@@ -1,18 +1,16 @@
-## Getting Started
+##AqarMap Project
+#Project description:
+Aqarmap services allow you to buy or sell an apartment while providing essential information (i.e. price, location, area,etc.) to help you take the right decision.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+##Functions
+#Owner Functions:
+1. Sign up
+2. Log in
+3. Advertise for an apartment (Offer an apartment for sale)
+4. Edit an Advertisement
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+#Client Functions:
+1. search by location 
+2. Search with certain Price Range 
+3. Search by payment method
+4. search by view
