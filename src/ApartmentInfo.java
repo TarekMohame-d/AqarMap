@@ -1,11 +1,8 @@
-import java.util.Scanner;
-
 public class ApartmentInfo {
-    Scanner input = new Scanner(System.in);
     String apartmentId;
     String apartmentCity;
     String apartmentStreet;
-    int price;
+    double price;
     String view;
     String paymentMethod;
     boolean apartmentInstallments;

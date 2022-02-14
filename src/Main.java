@@ -47,6 +47,13 @@ public class Main {
                         case "1":
                             client.searchByLocation(owner);
                             break;
+                        case "2":
+                            client.searchByPriceRange(owner);
+                            break;
+                        case "3":
+                            client.searchByPayment_method(owner);
+                        case "4":
+                            client.searchByView(owner);
                     }
                 }
             }

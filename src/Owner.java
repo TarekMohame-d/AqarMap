@@ -1,9 +1,12 @@
+import java.util.Scanner;
+
 public class Owner extends ApartmentInfo {
     String name;
     String password;
     String phone;
     String ownerId;
     ApartmentInfo apartmentInfo[] = new ApartmentInfo[5];
+    Scanner input = new Scanner(System.in);
 
     public void apartmentData(Owner owner) {
         int choice;
@@ -26,7 +29,7 @@ public class Owner extends ApartmentInfo {
             owner.apartmentInfo[apartmentNum].apartmentStreet = input.nextLine();
             System.out.println("\n**********************************************************************\n");
             System.out.print("Price : ");
-            owner.apartmentInfo[apartmentNum].price = input.nextInt();
+            owner.apartmentInfo[apartmentNum].price = input.nextDouble();
             input.nextLine();
             System.out.println("\n**********************************************************************\n");
             System.out.print("View : ");
@@ -109,7 +112,7 @@ public class Owner extends ApartmentInfo {
                 owner.apartmentInfo[apartmentNumber].apartmentStreet = input.nextLine();
                 System.out.println("\n**********************************************************************\n");
                 System.out.print("Price : ");
-                owner.apartmentInfo[apartmentNumber].price = input.nextInt();
+                owner.apartmentInfo[apartmentNumber].price = input.nextDouble();
                 input.nextLine();
                 System.out.println("\n**********************************************************************\n");
                 System.out.print("View : ");
@@ -145,7 +148,7 @@ public class Owner extends ApartmentInfo {
     void displayApartment(Owner owner, int apartmentNumber) {
         System.out.println("Owner info ------->>\n");
         System.out.print("Apartment owner name : ");
-        System.out.println(owner.name+"\n");
+        System.out.println(owner.name + "\n");
         System.out.print("Apartment owner phone : ");
         System.out.println(owner.phone);
         System.out.print("\n-------------------------------------------------------------------------\n");
